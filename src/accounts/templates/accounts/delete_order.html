@@ -1,0 +1,23 @@
+{% extends 'accounts/main.html' %}
+
+{% block content %}
+<br>
+
+<div class="row">
+	<div class="col-md-8 offset-md-2">
+		<div class="card card-body">
+			<p>Are you sure you want to delete <span style="font-weight:bold">{{order}}</span> ordered by <span style="font-weight:bold">{{customer.name}}</span> ?</p>
+
+			<form action="" method="POST">
+				{% csrf_token %}
+
+				<a class="btn btn-warning btn-sm" href="{% url 'accounts:home' %}">Cancel</a>     
+
+				<input class="btn btn-danger btn-sm" type="submit" name="confirm_delete" value="Confirm">
+			</form>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

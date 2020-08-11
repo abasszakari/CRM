@@ -1,0 +1,19 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<br>
+<div class="row">
+	<div class="col-md-8 offset-md-2">
+		<div class="card card-body">
+			<form action="" method='POST'>
+				{% csrf_token %}
+				{{form|crispy}}
+				<input class="btn btn-outline-success font-weight-bold" type="submit" name="submit" value='Submit'>
+			</form>
+
+		</div>
+	</div>
+</div>
+{% endblock %}
