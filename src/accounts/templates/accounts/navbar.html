@@ -7,14 +7,18 @@
     <ul class="navbar-nav">
       {% if request.user.is_staff %}
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'accounts:home' %}">Dashboard</a>
+        <a class="nav-link" href="{% url 'accounts:home' % }">Dashboard</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{% url 'accounts:products' %}">Products</a>
       </li>
+      {% else %}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'accounts:account' %}">Settings</a>
+      </li>
       {% endif %}
     </ul>
-    
+      
   </div>
   <div class="collapse navbar-collapse col-md-4 pull-right" id="navbarNav">
     <span class="navbar-nav pull-left" style="font-size:16px; color:#fff; margin-right:20px; ">Welcome, {{request.user}}</span>

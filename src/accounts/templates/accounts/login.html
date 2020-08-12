@@ -39,7 +39,8 @@
                 {% for message in messages %}
                     <span style="color:purple">{{message}}</span>
                 {% endfor %}   
-                <p class="text-center">Don't have an account? <a href="{% url 'accounts:register' %}">Sign Up</a> </p>                                                                 
+                <p class="text-center">Don't have an account? <a href="{% url 'accounts:register' %}">Sign Up</a> </p>
+                <p class="text-center">Forgot password? <a href="{% url 'password_reset' %}">Reset password</a> </p>                                                                 
             </form>
             </article>
         </div> <!-- card.// -->
